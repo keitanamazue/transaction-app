@@ -10,9 +10,9 @@ export const Main = () => {
     setAddress,
     amount,
     setAmount,
-  } = React.useContext(TransactionContext);
+  } = React.useContext(TransactionContext) as any;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
     if (!address || !amount) return alert("Please fill all the fields");
     sendTransaction();
@@ -68,7 +68,7 @@ export const Main = () => {
               className="w-full h-full px-12 py-4"
               onClick={connectWallet}
             >
-              Connect Walet
+              Connect wallet
             </button>
           </div>
         </div>
