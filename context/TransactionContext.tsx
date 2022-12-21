@@ -5,9 +5,9 @@ import { contractABI, contractAddress } from "../utils/connect";
 export const ethereum =
   typeof window !== "undefined" ? (window as any).ethereum : null;
 
-export const TransactionContext = createContext("");
+export const TransactionContext = createContext<any>("");
 
-export const TransactionProvider = ({ children }) => {
+export const TransactionProvider = ({ children }: any) => {
   const [currentAccount, setCurrentAccount] = useState("");
   const [address, setAddress] = useState("");
   const [amount, setAmount] = useState(0.0001);
