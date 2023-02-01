@@ -41,6 +41,7 @@ export const Main = () => {
               onChange={(e) => setAmount(e.target.value)}
               value={amount}
             />
+            a
             {/* <input
               type="text"
               className="bg-gray rounded-sm px-2 py-2"
